@@ -11,8 +11,13 @@ class Jurusan extends CI_Controller {
 
 	public function input()
 	{
-		$data['judul']="Input Jurusan Baru";
+		$data['judul']="Tambah Jurusan Baru";
 		$this->load->view('jurusan/input', $data, FALSE);
+	}
+
+	public function simpan()
+	{
+
 	}
 
 }
