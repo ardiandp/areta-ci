@@ -1,4 +1,4 @@
-<?php echo form_open('jurusan/simpan') ?>
+<?php echo form_open('jurusan/save') ?>
 <?php echo $judul ?>
 <table width="325" border="1">
   <tr>
