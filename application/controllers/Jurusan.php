@@ -37,12 +37,24 @@ class Jurusan extends CI_Controller {
 
 	public function edit() // meng edit data yang dipilih
 	{
+		$id=$this->uri->segment(3); //mengambil parameter
+		$data['judul']="Edit Data"; //judul
+		$data['edit']=$this->M_jurusan->getid($id)->row_array();
+		$this->load->view('jurusan/edit', $data, FALSE);
 
 	}
 
 	public function update()
 	{
+		$kode=$this->input->post('kode_jurusan');
+		$nama=$this->input->post('nama_jurusan');
 
+		$data=array( // disini record yang akan di update
+			'nama_jurusan'=>$nama
+		);
+
+		$this->M_jurusan->update($data,$kode);
+		redirect('jurusan','refresh');
 	}
 
 	public function delete()
@@ -50,7 +62,7 @@ class Jurusan extends CI_Controller {
 		$id=$this->uri->segment(3);
 		$this->db->where('kode_jurusan', $id);
 		$this->db->delete('jurusan');
-		redirect('jurusan','refresh')
+		redirect('jurusan','refresh');
 	}
 
 }

@@ -13,6 +13,18 @@ class M_jurusan extends CI_Model {
 		$this->db->insert('jurusan', $data);
 	}
 
+	public function getid($id)
+	{
+		$param = array('kode_jurusan' =>$id );
+		return $this->db->get_where('jurusan',$param);
+	}
+
+	public function update($data,$kode)
+	{
+		$this->db->where('kode_jurusan', $kode); // parameter
+		$this->db->update('jurusan', $data); //data yang diupdate
+	}
+
 
 }
 
