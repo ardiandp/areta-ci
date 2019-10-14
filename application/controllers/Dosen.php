@@ -42,6 +42,28 @@ class Dosen extends CI_Controller {
 		$this->load->view('dosen/edit', $data, FALSE);
 	}
 
+	public function update(){
+		$nik=$this->input->post('nik');
+		$data=array(
+			'nik'=>$this->input->post('nik'),
+			'kode_dosen'=>$this->input->post('kode_dosen'),
+			'nama_dosen'=>$this->input->post('nama_dosen'),
+			'jk'=>$this->input->post('jk'),
+			'email'=>$this->input->post('email'),
+			'status'=>$this->input->post('status')
+		);
+		$this->M_dosen->update($data,$nik);
+		redirect('dosen','refresh');
+	}
+
+	public function hapus()
+	{
+		$nik=$this->uri->segment(3);
+		$this->db->where('nik', $nik);
+		$this->db->delete('dosen');
+		redirect('dosen','refresh');
+	}
+
 
 
 }

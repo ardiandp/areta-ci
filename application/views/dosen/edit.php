@@ -1,17 +1,17 @@
-<?php echo form_open('dosen/save') ?>
+<?php echo form_open('dosen/update') ?>
 <?php echo $judul ?>
 <table width="325" border="1">
   <tr>
     <td>NIP Dosen</td>
-    <td><input type="text" name="nik" id="kode_jurusan"></td>
+    <td><input type="text" name="nik" value="<?php echo $edit['nik']?>" id="kode_jurusan"></td>
   </tr>
    <tr>
     <td>Kode Dosen</td>
-    <td><input type="text" name="kode_dosen" id="kode_jurusan"></td>
+    <td><input type="text" name="kode_dosen" value="<?php echo $edit['kode_dosen']?>" id="kode_jurusan"></td>
   </tr>
   <tr>
     <td>Nama Dosen</td>
-    <td><input type="text" name="nama_dosen" id="nama_jurusan"></td>
+    <td><input type="text" name="nama_dosen" value="<?php echo $edit['nama_dosen']?>" id="nama_jurusan"></td>
   </tr>
    <tr>
     <td>Jenis Kelamin</td>
@@ -20,7 +20,7 @@
   </tr>
    <tr>
     <td>Email</td>
-    <td><input type="text" name="email" id="kode_jurusan"></td>
+    <td><input type="text" name="email" value="<?php echo $edit['email']?>" id="kode_jurusan"></td>
   </tr>
    <tr>
     <td>Status</td>

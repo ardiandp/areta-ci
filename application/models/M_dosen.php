@@ -13,6 +13,17 @@ class M_dosen extends CI_Model {
 		return $this->db->insert('dosen', $data);
 	}
 
+	public function getnik($nik)
+	{
+		$param = array('nik' => $nik );
+		return $this->db->get_where('dosen',$param);
+	}
+
+	public function update($data,$nik){
+		$this->db->where('nik', $nik);
+		$this->db->update('dosen', $data);
+	}
+
 	
 
 }
