@@ -2,7 +2,7 @@
 <?php echo $judul ?>
 <table width="325" border="1">
   <tr>
-    <td>NIP</td>
+    <td>NIP Dosen</td>
     <td><input type="text" name="nik" id="kode_jurusan"></td>
   </tr>
    <tr>
