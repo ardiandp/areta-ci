@@ -6,6 +6,7 @@ class M_jurusan extends CI_Model {
 	public function tampil()
 	{
 		return $this->db->get('jurusan');
+		//return $this->db->query("select *from jurusan");
 	}
 
 	public function save($data)
