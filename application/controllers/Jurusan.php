@@ -11,7 +11,7 @@ class Jurusan extends CI_Controller {
 	public function index() //menampilkan data jurusan 
 	{
 		$data['judul']="Tampil Data Jurusan";
-		$data['jurusan']=$this->M_jurusan->baca()->result();// ambil data dari model
+		$data['jurusan']=$this->M_jurusan->tampil()->result();// ambil data dari model
 		$this->load->view('jurusan/tampil', $data, FALSE);
 	}
 
