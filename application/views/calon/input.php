@@ -41,6 +41,10 @@
 		<tr>
 			<td>Jurusan</td><td><select name="Jurusan">\
 				<option value=""> == Pilih Jurusan ==</option>
+				<?php
+				foreach ($jurusan as $key => $value) { ?>
+					<option value="<?php echo $value->kode_jurusan?>"> <?php echo $value->nama_jurusan?></option>
+				<?php } ?>
 			</select></td>
 		</tr>
 		<tr>
