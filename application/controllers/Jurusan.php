@@ -12,13 +12,18 @@ class Jurusan extends CI_Controller {
 	{
 		$data['judul']="Tampil Data Jurusan";
 		$data['jurusan']=$this->M_jurusan->tampil()->result();// ambil data dari model
+		//$this->load->view('jurusan/tampil', $data, FALSE);
+		$this->load->view('theme/header', $data, FALSE);
 		$this->load->view('jurusan/tampil', $data, FALSE);
+		$this->load->view('theme/footer', $data, FALSE);
 	}
 
 	public function input() // menambah data
 	{
 		$data['judul']="Tambah Jurusan Baru";
+		$this->load->view('theme/header', $data, FALSE);
 		$this->load->view('jurusan/input', $data, FALSE);
+		$this->load->view('theme/footer', $data, FALSE);
 	}
 
 	public function save() // menyimpan data
