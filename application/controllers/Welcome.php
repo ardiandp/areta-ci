@@ -20,9 +20,18 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		$this->load->view('theme/template');
 
 	}
+
+	public function test()
+	{
+		$data['judul']="themplate";
+		$this->load->view('theme/header', $data, FALSE);
+		$this->load->view('theme/footer', $data, FALSE);
+
+	}
+	
 
 	public function halo() // nama function halo
 	{

@@ -7,6 +7,10 @@ class M_agama extends CI_Model {
 		return $this->db->get('agama');
 	}
 
+	public function simpan($data)
+	{
+		return $this->db->insert('agama');
+	}
 	
 
 }
