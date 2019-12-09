@@ -23,7 +23,7 @@
       <th scope="row"><?php echo $no++ ?></th>
       <td><?php echo $value->kode_jurusan ?></td>
       <td><?php echo $value->nama_jurusan ?></td>
-      <td><a href="#" class="mdc-button mdc-button--raised">Edit</a> <a href="#" class="mdc-button mdc-button--unelevated filled-button--warning">Hapus</a></td>
+      <td><a href="<?php echo base_url('jurusan/edit/'.$value->kode_jurusan)?>" class="mdc-button mdc-button--raised">Edit</a> <a href="<?php echo base_url('jurusan/delete/'.$value->kode_jurusan)?>" class="mdc-button mdc-button--unelevated filled-button--warning">Hapus</a></td>
     </tr>
   	<?php } ?>
     
